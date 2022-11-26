@@ -1,4 +1,5 @@
+import SearchBtn from './SearchBtn.svelte';
 import Toolbar from './Toolbar.svelte';
 import ToolbarLinks from './ToolbarLinks.svelte';
 
-export { Toolbar, ToolbarLinks }
+export { SearchBtn, Toolbar, ToolbarLinks }

@@ -12,6 +12,7 @@
 		"@fontsource/fira-mono": "^4.5.0",
 		"@neoconfetti/svelte": "^1.0.0",
 		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-vercel": "next",
 		"@sveltejs/kit": "next",
 		"@sveltejs/package": "next",
 		"@tailwindcss/forms": "^0.5.3",
