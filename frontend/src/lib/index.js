@@ -1,17 +1,17 @@
-import { Banner } from './banners';
-import { Button, SearchBtn } from './buttons';
-import { Card, CardBody, CardHeader, CardFooter, ProfileCard } from './cards';
-import { Box, Flex, Grid, } from './cont';
-import { Form } from './forms';
-import { List } from './lists';
-import { Navbar, NavLogo, Sidebar, SidebarToggle, Toolbar, ToolbarLinks } from './nav'
-import { Section } from './sections';
-import { Table } from './tables';
-import { Text } from './text';
-
+import { Banner } from './banners/index.js';
+import { Button, SearchBtn } from './buttons/index.js';
+import { Card, CardBody, CardHeader, CardFooter, ProfileCard } from './cards/index.js';
+import { Box, Flex, Grid, } from './cont/index.js';
+import { Form } from './forms/index.js';
+import { List } from './lists/index.js';
+import { Navbar, NavLogo, Sidebar, SidebarToggle, Toolbar, ToolbarLinks } from './nav/index.js'
+import { Section } from './sections/index.js';
+import { Table } from './tables/index.js';
+import { Text } from './text/index.js';
+import { WalletToggle } from './wallet/index.js';
 
 export { CardBody, CardHeader, CardFooter, ProfileCard, SearchBtn }
 export { Banner, Button, Box, Card, Flex, Form, Grid, List, Section, Table, Text }
-export { Navbar, NavLogo }
-export { Sidebar, SidebarToggle }
-export { Toolbar, ToolbarLinks }
+export { Navbar, NavLogo, Sidebar, SidebarToggle, Toolbar, ToolbarLinks }
+
+export { WalletToggle }

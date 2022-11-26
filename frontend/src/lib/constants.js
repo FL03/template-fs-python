@@ -32,3 +32,30 @@ export let theme = {
     },
     link: "flex flex-initial overflow-y-clip hover:underline px-3 py-2 hover:opacity-75 text-white"
 }
+
+export let metadata = {
+
+    homepage: '/',
+    name: 'Puzzled',
+    slug: 'pzzld',
+    tags: [],
+    url: 'https://app.pzzld.eth.limo',
+    data: [
+        {
+            id: 0,
+            label: 'github',
+            data: ['FL03']
+        },
+        {
+            id: 1,
+            label: 'linkedin',
+            data: ['scsys_eth']
+        },
+        {
+            id: 2,
+            label: 'twitter',
+            data: ['jo3mccain']
+        }
+    ]
+}
+
