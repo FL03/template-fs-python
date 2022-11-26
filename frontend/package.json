@@ -1,0 +1,34 @@
+{
+	"dependencies": {
+		"@fontsource/fira-mono": "^4.5.0",
+		"cookie": "^0.4.1",
+		"dotenv": "16.0.3",
+		"svelte-web3": "latest"
+	},
+	"devDependencies": {
+		"@fontsource/fira-mono": "^4.5.0",
+		"@neoconfetti/svelte": "^1.0.0",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"@sveltejs/package": "next",
+		"@tailwindcss/forms": "^0.5.3",
+		"@tailwindcss/typography": "^0.5.8",
+		"autoprefixer": "^10.4.8",
+		"svelte": "^3.46.0",
+		"svelte-check": "^2.7.1",
+		"svelte-preprocess": "^4.10.7",
+		"tailwindcss": "^3.1.8",
+		"vite": "^3.1.0"
+	},
+	"name": "@app/frontend",
+	"private": false,
+	"scripts": {
+		"build": "vite build",
+		"check": "svelte-kit sync && svelte-check",
+		"check:watch": "svelte-kit sync && svelte-check --watch",
+		"dev": "vite dev",
+		"package": "vite package",
+		"preview": "vite preview"
+	},
+	"type": "module"
+}

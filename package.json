@@ -1,0 +1,24 @@
+{
+  "author": "FL03 <jo3mccain@icloud.com> (https://gitlab.com/FL03)",
+  "bugs": "https://gitlab.com/FL03/pzzld-eth-app/-/issues",
+  "description": "pzzld",
+  "keywords": [],
+  "homepage": "https://app.pzzld.eth.limo",
+	"license": "Apache-2.0",
+  "name": "@pzzld/app",
+  "private": false,
+  "scripts": {
+    "build": "bash ./scripts/build.sh",
+    "dev": "npm run client:dev",
+    "client:build": "npm run build --workspace=@app/frontend",
+    "client:dev": "npm run dev --workspace=@app/frontend",
+    "client:install": "npm install --workspace=@app/frontend",
+    "client:package": "npm run package --workspace=@app/frontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://gitlab.com/FL03/pzzld-eth-app",
+  "version": "0.0.0",
+  "workspaces": [
+    "frontend"
+  ]
+}
