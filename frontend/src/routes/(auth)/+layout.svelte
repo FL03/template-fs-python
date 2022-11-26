@@ -2,3 +2,4 @@
     
 </script>
 
+<slot/>
