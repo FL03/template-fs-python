@@ -1,5 +1,7 @@
-import { Navbar, NavLogo } from './navbar';
-import { Sidebar, SidebarToggle } from './sidebar';
-import { Toolbar, ToolbarLinks } from './toolbar';
+import { Navbar, NavLogo } from './navbar/index.js';
+import { Sidebar, SidebarToggle } from './sidebar/index.js';
+import { SearchBtn, Toolbar, ToolbarLinks } from './toolbar/index.js';
 
-export { Navbar, NavLogo, Sidebar, SidebarToggle, Toolbar, ToolbarLinks }
+export { Navbar, NavLogo }
+export { Sidebar, SidebarToggle, }
+export { SearchBtn, Toolbar, ToolbarLinks }

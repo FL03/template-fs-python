@@ -1,6 +1,6 @@
 <script>
-    import { SidebarToggle } from '$lib/nav/sidebar';
-    import { SearchBtn } from '$lib/buttons';
+    import { SidebarToggle } from '$lib';
+    import SearchBtn from './SearchBtn.svelte';
     import ToolbarLinks from './ToolbarLinks.svelte';
 
     export let linktree = [];

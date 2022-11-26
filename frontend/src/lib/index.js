@@ -1,10 +1,10 @@
 import { Banner } from './banners/index.js';
-import { Button, SearchBtn } from './buttons/index.js';
+import { Button } from './buttons/index.js';
 import { Card, CardBody, CardHeader, CardFooter, ProfileCard } from './cards/index.js';
 import { Box, Flex, Grid, } from './cont/index.js';
 import { Form } from './forms/index.js';
 import { List } from './lists/index.js';
-import { Navbar, NavLogo, Sidebar, SidebarToggle, Toolbar, ToolbarLinks } from './nav/index.js'
+import { Navbar, NavLogo, Sidebar, SidebarToggle, SearchBtn, Toolbar, ToolbarLinks } from './nav/index.js'
 import { Section } from './sections/index.js';
 import { Table } from './tables/index.js';
 import { Text } from './text/index.js';
