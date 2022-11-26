@@ -6,7 +6,7 @@
   "homepage": "https://app.pzzld.eth.limo",
 	"license": "Apache-2.0",
   "name": "@pzzld/app",
-  "private": false,
+  "private": true,
   "scripts": {
     "build": "bash ./scripts/build.sh",
     "dev": "npm run client:dev",
