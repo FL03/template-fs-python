@@ -21,7 +21,7 @@
 	</div>
 	
 	<Toolbar 
-		linktree={[]} 
+		linktree={data.data[0].linktree} 
 		bind:sidebar={open}
 	/>
 </div>

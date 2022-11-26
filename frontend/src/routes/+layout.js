@@ -4,6 +4,14 @@ import { metadata } from '$lib/constants';
 export async function load() {
     return {
         title: metadata.name,
-        data: []
+        data: [
+            {
+                layout: 'auth',
+                linktree: [ 
+                    { href: '/editor', label: 'Editor'},
+                    { href: '/settings', label: 'Settings'}
+                ]
+            }
+        ]
     };
 }
