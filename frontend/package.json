@@ -1,10 +1,13 @@
 {
+	"author": "FL03 <jo3mccain@icloud.com> (https://gitlab.com/FL03)",
+	"bugs": "https://gitlab.com/FL03/pzzld-eth-app/-/issues",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
 		"cookie": "^0.4.1",
 		"dotenv": "16.0.3",
 		"svelte-web3": "latest"
 	},
+	"description": "A simple dApp",
 	"devDependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
 		"@neoconfetti/svelte": "^1.0.0",
@@ -20,8 +23,12 @@
 		"tailwindcss": "^3.1.8",
 		"vite": "^3.1.0"
 	},
+	"homepage": "https://app.pzzld.eth.limo",
+	"license": "Apache-2.0",
 	"name": "@app/frontend",
 	"private": false,
+	"readme": "https://gitlab.com/FL03/pzzld-eth-app/#README",
+	"repository": "https://gitlab.com/FL03/pzzld-eth-app",
 	"scripts": {
 		"build": "vite build",
 		"check": "svelte-kit sync && svelte-check",
@@ -30,5 +37,6 @@
 		"package": "vite package",
 		"preview": "vite preview"
 	},
-	"type": "module"
+	"type": "module",
+	"version": "0.0.0"
 }

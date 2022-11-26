@@ -16,6 +16,7 @@
     "client:package": "npm run package --workspace=@app/frontend",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "readme": "https://gitlab.com/FL03/pzzld-eth-app/#README",
   "repository": "https://gitlab.com/FL03/pzzld-eth-app",
   "version": "0.0.0",
   "workspaces": [

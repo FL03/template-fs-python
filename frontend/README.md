@@ -1,2 +1,2 @@
-# @svkcl/core
+# @app/frontend
 
