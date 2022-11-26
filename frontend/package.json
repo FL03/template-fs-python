@@ -26,7 +26,6 @@
 	"homepage": "https://app.pzzld.eth.limo",
 	"license": "Apache-2.0",
 	"name": "@app/frontend",
-	"private": false,
 	"readme": "https://gitlab.com/FL03/pzzld-eth-app/#README",
 	"repository": "https://gitlab.com/FL03/pzzld-eth-app",
 	"scripts": {
