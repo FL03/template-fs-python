@@ -1,5 +1,8 @@
 <script>
+    import { connected } from 'svelte-web3';
     
 </script>
 
-<slot/>
+{#if $connected}
+    <slot/>
+{/if}
