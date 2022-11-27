@@ -1,11 +1,7 @@
 <script>
-    import { Card, CardBody, Section } from '$lib';
     /** @type {import('./$types').PageData} */
     export let data;
-    let card = {
-        bg: "bg-zinc-500",
-        color: 'text-white'
-    }
+    import abstractShapes from '$lib/assets/media/abstractShapes.svg';
 </script>
 
 <svelte:head>
@@ -14,14 +10,9 @@
 </svelte:head>
 
 
-<div class="flex flex-auto items-center justify-between py-24 min-h-full max-h-screen min-w-full max-w-screen">
-    <Section bg={"bg-transparent"}>
-        <Card bg={card.bg} color={card.color} pd={"p-3"} props={""}>
-            <CardBody>
-                <span class="prose text-center">
-                    Welcome to Proton
-                </span>
-            </CardBody>
-        </Card>
-    </Section>
+<div class="flex flex-auto items-center justify-center rounded">
+    <div class="rounded flex"><img alt="#" src="{abstractShapes}" class="flex "/></div>
+    <span class="prose text-center text-white">
+        Welcome
+    </span>
 </div>
