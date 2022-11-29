@@ -7,8 +7,10 @@
   
   let plugins = [gfm()]
 
-  let value = data.content;
+  let value = '';
+
 </script>
 
 
-<Editor {plugins} {value} on:change={(e) => {value = e.detail.value}}/>
+<Editor class="prose-xl prose-slate max-w-none" {plugins} {value} on:change={(e) => {value = e.detail.value}}/>
+
