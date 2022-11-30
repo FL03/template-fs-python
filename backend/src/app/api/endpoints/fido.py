@@ -5,27 +5,29 @@
         ... Summary ...
 """
 from fastapi import APIRouter, Depends, HTTPException, Security, status
-from fastapi.security.oauth2 import SecurityScopes, OAuth2PasswordRequestForm
 from fido2.webauthn import PublicKeyCredentialRpEntity, PublicKeyCredentialUserEntity
 from fido2.server import Fido2Server
+from tortoise.contrib.fastapi import HTTPNotFoundError
 
-from app.core import Authorization, session
+from app import core
 from app.data.models import User, UserIn, Users, Token, TokenIn
 
-router = APIRouter(tags=['auth', 'fido'])
-sesh = session()
+# Create a new router for the service
+router = APIRouter(prefix="/fido", tags=['auth', 'fido'])
+# Call the cached session instance
+session = core.session()
 
 rp = PublicKeyCredentialRpEntity(name="FIDO Server", id="localhost")
 server = Fido2Server(rp)
 
-credentials = []
 
 @router.get("/")
 async def index():
     return redirect("")
 
+
 @router.post("/register")
-async def registration():
+async def registration() -> dict:
     options, state = server.register_begin(
         PublicKeyCredentialUserEntity(
             id=b"user_id",
@@ -36,37 +38,35 @@ async def registration():
         user_verification="discouraged",
         authenticator_attachment="cross-platform",
     )
+    # 
+    session.state = state
 
-    session["state"] = state
-    print("\n\n\n\n")
-    print(options)
-    print("\n\n\n\n")
+    return dict(options)
 
-    return jsonify(dict(options))
 
-@router.post("/api/register/complete")
-async def register_complete():
+@router.post("/register/redirect")
+async def register_complete() -> dict:
     response = request.json
     print("RegistrationResponse:", response)
     auth_data = server.register_complete(session["state"], response)
 
     credentials.append(auth_data.credential_data)
     print("REGISTERED CREDENTIAL:", auth_data.credential_data)
-    return jsonify({"status": "OK"})
+    return {"status": "OK"}
 
 
-@router.post("/auth/fido")
+@router.post("/auth", responses={404: dict(model=HTTPNotFoundError)})
 async def authenticate_begin():
     if not credentials:
         abort(404)
 
     options, state = server.authenticate_begin(credentials)
-    session["state"] = state
+    session.state = state
 
     return jsonify(dict(options))
 
 
-@router.post("/auth/fido/redirect")
+@router.post("/auth/redirect", responses={404: dict(model=HTTPNotFoundError)})
 async def authenticate_complete():
     if not credentials:
         abort(404)
@@ -74,9 +74,9 @@ async def authenticate_complete():
     response = request.json
     print("AuthenticationResponse:", response)
     server.authenticate_complete(
-        session.pop("state"),
+        session.state,
         credentials,
         response,
     )
     print("ASSERTION OK")
-    return jsonify({"status": "OK"})
+    return {"status": "OK"}
