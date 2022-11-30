@@ -4,8 +4,13 @@
     Description:
         ... Summary ...
 """
+from datetime import datetime
 from pydantic import BaseModel
 
+
+class Message(BaseModel):
+    message: iter
+    timestamp: str = str(datetime.now())
 
 class Status(BaseModel):
     message: str
