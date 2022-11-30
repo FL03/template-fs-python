@@ -9,8 +9,18 @@ from pydantic import BaseModel
 
 
 class Message(BaseModel):
-    message: iter
-    timestamp: str = str(datetime.now())
+    message: str
+    timestamp: str
+
+    def message(self) -> str:
+        return self.message 
+
+    def timestamp(self) -> str:
+        return self.timestamp
+    
+    def now() -> str:
+        self.timestamp = str(datetime.now())
+        return self.timestamp
 
 class Status(BaseModel):
     message: str
