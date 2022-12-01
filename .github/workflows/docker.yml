@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Backend - Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@v4
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: jo3mccain/pzzld-api
         username: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -29,7 +29,7 @@ jobs:
         dockerfile: Dockerfile
         workdir: backend
     - name: Frontend - Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@v4
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: jo3mccain/pzzld-ui
         username: ${{ secrets.DOCKERHUB_USERNAME }}
