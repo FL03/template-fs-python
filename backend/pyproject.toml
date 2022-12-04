@@ -19,6 +19,7 @@ python-dotenv = "^0.21.0"
 python-jose = "^3.3.0"
 tortoise-orm = { extras = ["asyncpg"], version = "^0.19.2" }
 strawberry-graphql = {extras = ["fastapi"], version = "^0.142.3"}
+openapi = "^1.1.0"
 
 [build-system]
 requires = ["poetry-core"]
