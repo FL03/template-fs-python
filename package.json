@@ -10,11 +10,13 @@
   "scripts": {
     "build": "bash ./scripts/build.sh",
     "dev": "npm run client:dev",
+    "start": "npm run client:start",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "client:build": "npm run build --workspace=@app/frontend",
     "client:dev": "npm run dev --workspace=@app/frontend",
     "client:install": "npm install --workspace=@app/frontend",
     "client:package": "npm run package --workspace=@app/frontend",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client:start": "npm run start --workspace=@app/frontend"
   },
   "readme": "https://gitlab.com/FL03/pzzld-eth-app/#README",
   "repository": "https://gitlab.com/FL03/pzzld-eth-app",

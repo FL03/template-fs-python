@@ -10,16 +10,8 @@ WORKDIR /workspace
 COPY . .
 RUN npm install && npm run build
 
-FROM builder as development
-
-EXPOSE 4173
-EXPOSE 5173
-
-CMD ["npm", "run", "dev", "--host"]
-
 FROM builder as preview
 
-EXPOSE 4173
-EXPOSE 5173
+EXPOSE 3000
 
-CMD ["npm", "run", "preview", "--host"]
+CMD ["npm", "run", "start"]
