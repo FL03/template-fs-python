@@ -10,7 +10,9 @@ WORKDIR /workspace
 COPY . .
 RUN npm install && npm run build
 
-FROM builder as preview
+FROM builder as runner
+
+ENV MODE="production"
 
 EXPOSE 3000
 
