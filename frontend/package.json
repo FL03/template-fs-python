@@ -13,7 +13,7 @@
 		"@fontsource/fira-mono": "^4.5.0",
 		"@neoconfetti/svelte": "^1.0.0",
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-vercel": "next",
+		"@sveltejs/adapter-node": "next",
 		"@sveltejs/kit": "next",
 		"@sveltejs/package": "next",
 		"@tailwindcss/forms": "^0.5.3",
@@ -37,7 +37,8 @@
 		"check:watch": "svelte-kit sync && svelte-check --watch",
 		"dev": "vite dev",
 		"package": "vite package",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"start": "node build/index.js"
 	},
 	"type": "module",
 	"version": "0.0.0"
