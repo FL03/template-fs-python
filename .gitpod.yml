@@ -1,5 +1,7 @@
 tasks:
-  - init: npm install && npm run build
+  - init: |
+      npm install && npm run build
+      cd backend && poetry install
     command: npm run dev
 
 

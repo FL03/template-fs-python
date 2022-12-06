@@ -29,6 +29,22 @@ class Authenticator:
         if data: 
             return data
 
+class AccessToken(object):
+    data: dict
+    expires_delta: Union[timedelta, None] = None
+
+    def __init__(data: dict, expires_delta: Union[timedelta, None] = None, *args, **kwargs):
+        self.data = data
+        self.expires_delta = expires_delta
+
+    def create(self):
+        to_encode = self.data.copy()
+        if expires_delta:
+            expire = datetime.utcnow() + self.expires_delta
+        else:
+            expire = datetime.utcnow() + timedelta(minutes=15)
+        to_encode.update({"exp": expire})
+        return jwt.encode(to_encode, sesh.settings.secret_token, algorithm=auth.algorithm)
 
 
 async def get_user(username: str) -> UserIn:
