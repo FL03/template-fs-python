@@ -1,6 +1,4 @@
 <script>
-  /** @type {import('./$types').PageData} */
-  export let data;
   import { Editor, Viewer } from 'bytemd'
   import gfm from '@bytemd/plugin-gfm'
   import 'bytemd/dist/index.css';
@@ -13,4 +11,3 @@
 
 
 <Editor class="prose-xl prose-slate max-w-none" {plugins} {value} on:change={(e) => {value = e.detail.value}}/>
-

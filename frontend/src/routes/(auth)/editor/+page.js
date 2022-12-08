@@ -1,6 +1,2 @@
-/** @type {import('./$types').PageLoad} */
-export async function load() {
-    return {
-        content: ''
-    };
-};
+
+export const prerender = true;
