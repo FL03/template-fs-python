@@ -12,6 +12,9 @@ from tortoise.contrib.fastapi import HTTPNotFoundError
 from app import core
 from app.data.models import User, UserIn, Users, Token, TokenIn
 
+import fido2.features
+
+fido2.features.webauthn_json_mapping.enabled = True
 # Create a new router for the service
 router = APIRouter(prefix="/fido", tags=['auth', 'fido'])
 # Call the cached session instance
