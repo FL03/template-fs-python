@@ -1,11 +1,10 @@
 <script>
-    /** @type {import('./$types').PageData} */
-    export let data;
+    
 </script>
 
 <svelte:head>
-	<title>{data.head.title}</title>
-	<meta name="description" content="{data.head.description}" />
+	<title>Dashboard</title>
+	<meta name="description" content="Welcome to puzzled, a proof-of-concept application written in support of the Scattered-Systems, DAO LLC ecosystem" />
 </svelte:head>
 
 

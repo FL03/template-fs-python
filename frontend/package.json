@@ -31,7 +31,7 @@
 		"check": "svelte-kit sync && svelte-check",
 		"check:watch": "svelte-kit sync && svelte-check --watch",
 		"dev": "vite dev",
-		"package": "vite package",
+		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"start": "node build/index.js"
 	},
