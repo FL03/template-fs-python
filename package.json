@@ -5,7 +5,7 @@
   "keywords": [],
   "homepage": "https://app.pzzld.eth.limo",
 	"license": "Apache-2.0",
-  "name": "@pzzld/app",
+  "name": "pzzld",
   "private": true,
   "scripts": {
     "preinstall": "npm install -g wasm-pack",
