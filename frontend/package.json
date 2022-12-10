@@ -18,9 +18,9 @@
 		"@tailwindcss/typography": "latest",
 		"autoprefixer": "latest",
 		"bytemd": "latest",
-		"svelte": "next",
-		"svelte-check": "next",
-		"svelte-preprocess": "next",
+		"svelte": "latest",
+		"svelte-check": "latest",
+		"svelte-preprocess": "latest",
 		"tailwindcss": "latest",
 		"vite": "^4.0.0"
 	},

@@ -23,7 +23,7 @@ server = Fido2Server(rp)
 
 @router.get("/")
 async def index():
-    return redirect("")
+    return { "message": "FIDO Router" }
 
 
 @router.post("/register")
