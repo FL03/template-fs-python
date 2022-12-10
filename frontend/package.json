@@ -22,7 +22,7 @@
 		"svelte-check": "next",
 		"svelte-preprocess": "next",
 		"tailwindcss": "latest",
-		"vite": "beta"
+		"vite": "^4.0.0"
 	},
 	"license": "Apache-2.0",
 	"name": "@app/frontend",
