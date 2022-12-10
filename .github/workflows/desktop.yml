@@ -63,7 +63,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
       - name: install app dependencies and build it
-        run: yarn && yarn build
+        run: npm install && npm run build
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -83,10 +83,10 @@ jobs:
         with:
           script: |
             github.rest.repos.updateRelease({
+              draft: false,
+              prerelease: false,
               projectPath: 'frontend',
               owner: context.repo.owner,
-              repo: context.repo.repo,
               release_id: process.env.release_id,
-              draft: false,
-              prerelease: false
+              repo: context.repo.repo
             })
