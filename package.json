@@ -1,11 +1,11 @@
 {
-  "author": "FL03 <jo3mccain@icloud.com> (https://gitlab.com/FL03)",
-  "bugs": "https://gitlab.com/FL03/pzzld-eth-app/-/issues",
+  "author": "FL03 <jo3mccain@icloud.com> (https://github.com/FL03)",
+  "bugs": "https://github.com/FL03/pzzld-eth-app/issues",
   "description": "pzzld",
   "keywords": [],
   "homepage": "https://app.pzzld.eth.limo",
 	"license": "Apache-2.0",
-  "name": "@pzzld/app",
+  "name": "pzzld-eth-app",
   "private": true,
   "scripts": {
     "build": "npm run build --workspace=@app/frontend",
@@ -19,8 +19,8 @@
     "client:start": "npm run start --workspace=@app/frontend",
     "wasm:install": "npm install --workspace=@app/wasm"
   },
-  "readme": "https://gitlab.com/FL03/pzzld-eth-app/#README",
-  "repository": "https://gitlab.com/FL03/pzzld-eth-app",
+  "readme": "https://github.com/FL03/pzzld-eth-app/#README",
+  "repository": "https://github.com/FL03/pzzld-eth-app",
   "version": "0.1.0",
   "workspaces": [
     "frontend",
