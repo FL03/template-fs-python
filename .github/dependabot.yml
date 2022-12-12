@@ -1,5 +1,9 @@
 version: 2
 updates:
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: daily
   - package-ecosystem: github-actions
     directory: /
     schedule:
@@ -14,5 +18,9 @@ updates:
       interval: daily
   - package-ecosystem: npm
     directory: /frontend
+    schedule:
+      interval: daily
+  - package-ecosystem: cargo
+    directory: /frontend/pzzld
     schedule:
       interval: daily

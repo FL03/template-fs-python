@@ -23,16 +23,18 @@ jobs:
     - name: Backend - Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@v5
       with:
-        name: jo3mccain/pzzld-api
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
         dockerfile: Dockerfile
+        name: jo3mccain/pzzld-api
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        snapshot: true
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
         workdir: backend
     - name: Frontend - Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@v5
       with:
-        name: jo3mccain/pzzld-ui
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
         dockerfile: Dockerfile
+        name: jo3mccain/pzzld-ui
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        snapshot: true
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
         workdir: frontend
