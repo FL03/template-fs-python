@@ -1,0 +1,18 @@
+{
+	"author": "FL03 <jo3mccain@icloud.com> (https://gitlab.com/FL03)",
+  	"bugs": "https://gitlab.com/FL03/pzzld-eth-app/-/issues",
+  	"description": "pzzld",
+  	"keywords": [],
+  	"homepage": "https://app.pzzld.eth.limo",
+	"license": "Apache-2.0",
+  	"name": "@pzzld/wasm",
+  	"private": true,
+	"scripts": {
+		"build": "wasm-pack build --target web",
+		"install": "npm install -g wasm-pack",
+		"package": "wasm-pack pack",
+		"preinstall": "rustup default nightly && rustup target add wasm32-uknown-unknown wasm32-wasi",
+		"test": "wasm-pack test --target node"
+	},
+	"type": "module"
+}

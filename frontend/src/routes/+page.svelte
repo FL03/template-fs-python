@@ -1,4 +1,11 @@
 <script>
+    import init, { greet } from 'pzzld';
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        console.log('init wasm-pack');
+        greet('From svelte-kit');
+    })
     
 </script>
 
