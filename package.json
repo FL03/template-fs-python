@@ -23,6 +23,7 @@
   "repository": "https://github.com/FL03/pzzld-eth-app",
   "version": "0.1.0",
   "workspaces": [
-    "frontend"
+    "frontend",
+    "frontend/pzzld"
   ]
 }
