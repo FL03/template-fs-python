@@ -8,22 +8,21 @@
   "name": "pzzld-eth-app",
   "private": true,
   "scripts": {
-    "build": "npm run build --workspace=@app/frontend",
+    "build": "npm run build --workspace=app.pzzld.eth",
     "dev": "npm run client:dev",
     "start": "npm run client:start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client:build": "npm run build --workspace=@app/frontend",
-    "client:dev": "npm run dev --workspace=@app/frontend",
-    "client:install": "npm install --workspace=@app/frontend",
-    "client:package": "npm run package --workspace=@app/frontend",
-    "client:start": "npm run start --workspace=@app/frontend",
-    "wasm:install": "npm install --workspace=@app/wasm"
+    "client:build": "npm run build --workspace=app.pzzld.eth",
+    "client:dev": "npm run dev --workspace=app.pzzld.eth",
+    "client:install": "npm install --workspace=app.pzzld.eth",
+    "client:package": "npm run package --workspace=app.pzzld.eth",
+    "client:start": "npm run start --workspace=app.pzzld.eth",
+    "wasm:install": "npm install --workspace=app.pzzld.eth"
   },
   "readme": "https://github.com/FL03/pzzld-eth-app/#README",
   "repository": "https://github.com/FL03/pzzld-eth-app",
   "version": "0.1.0",
   "workspaces": [
-    "frontend",
-    "frontend/pzzld"
+    "frontend"
   ]
 }

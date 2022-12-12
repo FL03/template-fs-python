@@ -1,10 +1,13 @@
 {
+	"author": "FL03 <jo3mccain@icloud.com> (https://github.com/FL03)",
+	"bugs": "https://github.com/FL03/pzzld-eth-app/issues",	
 	"dependencies": {
 		"@ensdomains/ensjs": "latest",
 		"cookie": "latest",
 		"dotenv": "latest",
 		"svelte-web3": "latest"
 	},
+	"description": "pzzld",
 	"devDependencies": {
 		"@bytemd/plugin-gfm": "latest",
 		"@fontsource/fira-mono": "latest",
@@ -25,8 +28,12 @@
 		"vite": "^4.0.0",
 		"vite-plugin-wasm-pack": ""
 	},
+	"keywords": [],
+	"homepage": "https://app.pzzld.eth.limo",
 	"license": "Apache-2.0",
-	"name": "@app/frontend",
+	"name": "app.pzzld.eth",
+	"readme": "https://github.com/FL03/pzzld-eth-app/#README",
+  	"repository": "https://github.com/FL03/pzzld-eth-app",
 	"scripts": {
 		"prestart": "npm run wasm:build",
 		"build": "npm run wasm:build && vite build",
@@ -38,5 +45,9 @@
 		"start": "node build/index.js",
 		"wasm:build": "npm run build --workspace=@pzzld/wasm"
 	},
-	"type": "module"
+	"type": "module",
+	"version": "0.1.0",
+	"workspaces": [
+		"pzzld"
+	]
 }

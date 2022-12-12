@@ -1,4 +1,4 @@
-FROM node:latest as base
+FROM node:18.12.1 as base
 
 RUN apt-get update -y && apt-get upgrade -y
 

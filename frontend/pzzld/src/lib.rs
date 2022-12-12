@@ -4,11 +4,15 @@
     Description: ... Summary ...
 */
 include!(concat!(env!("OUT_DIR"), "/wasm_binary.rs"));
+#[doc(inline)]
+pub use self::utils::*;
 
 extern crate cfg_if;
 extern crate wasm_bindgen;
 
-mod utils;
+pub mod api;
+
+pub(crate) mod utils;
 
 use cfg_if::cfg_if;
 use wasm_bindgen::prelude::*;
