@@ -22,10 +22,22 @@ WORKDIR /workspace
 COPY . .
 RUN npm install && npm run build
 
-FROM builder as runner
+FROM builder as development
 
 ENV MODE="production"
 
 EXPOSE 3000
+CMD [ "npm", "run", "start" ]
 
-CMD ["npm", "run", "start"]
+FROM node:lts-alpine as runner
+
+RUN apt-get update -y && apt-get upgrade -y
+
+COPY --chown=55 --from=builder /workspace/build ./build
+
+FROM runner
+
+ENV MODE="production"
+
+EXPOSE 3000
+CMD ["node", "build/index.js"]
